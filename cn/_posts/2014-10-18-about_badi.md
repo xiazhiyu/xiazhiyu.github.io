@@ -1,5 +1,6 @@
 ---
 layout: post_cn
+comments: true
 title: "关于badi"
 date: 2014-10-18 15:23:36
 categories: SAP
@@ -12,5 +13,3 @@ categories: SAP
 可以查看示例代码：
 ![padi2](http://picforxyjp.qiniudn.com/po_padi2.PNG)
 接着用se19创建badi的继承实例即可。
-
-

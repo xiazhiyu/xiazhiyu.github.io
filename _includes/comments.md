@@ -4,6 +4,7 @@
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'xyjp'; // required: replace example with your forum shortname
     var disqus_url = '{{ site.url }}{{ page.url | remove:'index.html' }}';
+    console.log(disqus_url);
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
