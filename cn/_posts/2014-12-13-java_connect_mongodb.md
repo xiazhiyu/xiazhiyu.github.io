@@ -9,6 +9,7 @@ categories: JAVA
 
 连接类：
 
+    {% highlight java %}
     package net.xyjp.fanp.utils;
 
     import com.mongodb.DB;
@@ -62,10 +63,12 @@ categories: JAVA
         }   
         
     }
+    {% endhighlight %}
 
 调用示例：
 
 
+    {% highlight java %}
     @Stateless
     @Path("user")
     public class UserFacadeREST extends AbstractFacade<User> {
@@ -80,5 +83,6 @@ categories: JAVA
       logField.put("time", System.currentTimeMillis());
 
     }
+    {% endhighlight %}
 
 
