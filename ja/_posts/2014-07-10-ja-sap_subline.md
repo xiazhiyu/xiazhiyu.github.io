@@ -7,10 +7,11 @@ date: 2014-07-10 23:34:41
 ---
 
 
-要件により価格決定表にある小計値のロジックを変更する必要があり、下記ようにロジックを変更しました。
+要件により価格決定表にある小計値のロジックを変更する必要があり、下記ようにロジックを変更しました。<br/>
 普段条件レートと条件金額しか累積できないが、今回の要件で条件基礎値も累積できるように変更：
 
-コード位置：SAPLV61A program  FORM XKOMV_BEWERTEN (Include LV61AA55):
+コード位置：<br/>
+SAPLV61A program  FORM XKOMV_BEWERTEN (Include LV61AA55):
 
 	{% highlight abap %}
 * L O O P
