@@ -1,6 +1,5 @@
 ---
 layout: post_cn
-comments: true
 title: "关于badi"
 date: 2014-10-18 15:23:36
 categories: SAP
