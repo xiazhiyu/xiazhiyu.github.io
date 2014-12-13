@@ -10,7 +10,7 @@ date: 2014-07-10 23:34:41
 在价格计算过程中根据需要更改小计的业务逻辑。
 位置：SAPLV61A program  FORM XKOMV_BEWERTEN (Include LV61AA55):
 
-
+	{% highlight abap %}
 	* L O O P
 	LOOP AT xkomv.
 		...
@@ -42,3 +42,4 @@ date: 2014-07-10 23:34:41
 		...
 	* L O O P
 	ENDLOOP.
+  {% endhighlight %}
