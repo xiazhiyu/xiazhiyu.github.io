@@ -21,7 +21,7 @@ layout: default_ja
 <span class="categories">
   in categories
   {% for cat in page.categories %}
-    {% if cat != 'ja'%}
+    {% if cat != 'ja' %}
       <a href="{{ site.url }}/ja/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
     {% endif %}
   {% endfor %}
