@@ -66,4 +66,27 @@ tag: JAVA JAX-RS
   }
   {% endhighlight %}
 
+在jax-rs 2.0 中，你还可以通过接口DynamicFeature按照package进行配置。
+  
+  {% highlight java %}
+  @Provider
+  public class MyDynamicFeature implements DynamicFeature {
+
+      @Override
+      public void configure(final ResourceInfo resourceInfo,
+                            final FeatureContext context) {
+
+          final String resourcePackage = resourceInfo.getResourceClass()
+                  .getPackage().getName();
+          final Method resourceMethod = resourceInfo.getResourceMethod();
+
+          if ("my.package.admin".equals(resourcePackage)
+                  && resourceMethod.getAnnotation(GET.class) != null) {
+              context.register(LogRecorderInterceptor.class);
+          }
+      }
+  }
+  {% endhighlight %}
+
+在这种情况下所有在my.package.admin包中类的方法，都会执行LogRecorderInterceptor中的filter方法。
   
