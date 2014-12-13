@@ -1,5 +1,5 @@
 <!-- Duoshuo Comment BEGIN -->  
-    <div class="ds-thread" data-thread-key='{ page.id }' data-title='{ page.title }' data-url='{{ site.url }}{{ page.url | remove:'index.html' }}'></div> 
+    <div class="ds-thread" data-thread-key='{ page.title }' data-title='{ page.title }' data-url='{{ site.url }}{{ page.url | remove:'index.html' }}'></div> 
     <script type="text/javascript">  
     var duoshuoQuery = {short_name:"fyg"};  
         (function() {  
