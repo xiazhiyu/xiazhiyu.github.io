@@ -7,22 +7,22 @@ date: 2014-07-10 23:34:41
 ---
 
 
-要件により価格決定表にある小計値のロジックを変更する必要があり、下記ようにロジックを変更しました。<br/>
-普段条件レートと条件金額しか累積できないが、今回の要件で条件基礎値も累積できるように変更：
+今回のプロジェクトの要件で、価格決定表にある小計値ロジックを変更する必要があり、下記ように対応しました。<br/>
+普段条件レートと条件金額しか累積できないが、今回の条件基礎値も累積できるようにコードを変更：
 
-コード位置：<br/>
+位置：<br/>
 SAPLV61A program  FORM XKOMV_BEWERTEN (Include LV61AA55):
 
 	{% highlight abap %}
 * L O O P
 LOOP AT xkomv.
 	...
-	* calculate subtotals in KOMP
+	"calculate subtotals in KOMP
 	IF xkomv-kinak NA 'AKLMXZ'.
 		...
-		* fill subtotal work fields
-		CASE xkomv-kzwiw.        <== The setting for KZWIW
-			WHEN ' '.                  is checked in this
+		"fill subtotal work fields
+		CASE xkomv-kzwiw.        "<== The setting for KZWIW is checked in this
+			WHEN ' '.                  
 			
 			WHEN 'A'. CASE statement.
 			...
