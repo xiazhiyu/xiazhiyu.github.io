@@ -13,6 +13,7 @@ tag: JAVA JAX-RS
 
 首先创建类，继承ContainerRequestFilter,ContainerResponseFilter。
 
+  {% highlight java %}
   @LogRecorder
   @Provider
   public class LogRecorderInterceptor implements ContainerRequestFilter,ContainerResponseFilter{
@@ -27,6 +28,7 @@ tag: JAVA JAX-RS
           System.out.println("发出response");      
       }
   }
+  {% endhighlight %}
 
 使用@NameBinding为该类创建一个注解接口LogRecorder
 
