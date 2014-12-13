@@ -14,41 +14,41 @@ tag: JAVA JAX-RS
 首先创建类，继承ContainerRequestFilter,ContainerResponseFilter。
 
   {% highlight java %}
-  @LogRecorder
-  @Provider
-  public class LogRecorderInterceptor implements ContainerRequestFilter,ContainerResponseFilter{
+@LogRecorder
+@Provider
+public class LogRecorderInterceptor implements ContainerRequestFilter,ContainerResponseFilter{
 
-      @Override
-      public void filter(ContainerRequestContext requestContext) throws IOException {
-        System.out.println("接受request");  
-      }
+    @Override
+    public void filter(ContainerRequestContext requestContext) throws IOException {
+      System.out.println("接受request");  
+    }
 
-      @Override
-      public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) {
-          System.out.println("发出response");      
-      }
-  }
+    @Override
+    public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) {
+        System.out.println("发出response");      
+    }
+}
   {% endhighlight %}
 
 使用@NameBinding为该类创建一个注解接口LogRecorder
 
   {% highlight java %}
-  import java.lang.annotation.ElementType;
-  import java.lang.annotation.Retention;
-  import java.lang.annotation.RetentionPolicy;
-  import java.lang.annotation.Target;
-  import javax.ws.rs.NameBinding;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import javax.ws.rs.NameBinding;
 
-  /**
-   *
-   * @author xiazhiyu
-   */
-  @NameBinding
-  @Target({ ElementType.TYPE, ElementType.METHOD })
-  @Retention(value = RetentionPolicy.RUNTIME)
-  public @interface LogRecorder {
-      
-  }
+/**
+ *
+ * @author xiazhiyu
+ */
+@NameBinding
+@Target({ ElementType.TYPE, ElementType.METHOD })
+@Retention(value = RetentionPolicy.RUNTIME)
+public @interface LogRecorder {
+    
+}
   {% endhighlight %}
 
 对resource类或者方法进行注解
@@ -69,23 +69,23 @@ tag: JAVA JAX-RS
 在jax-rs 2.0 中，你还可以通过接口DynamicFeature按照package进行配置。
   
   {% highlight java %}
-  @Provider
-  public class MyDynamicFeature implements DynamicFeature {
+@Provider
+public class MyDynamicFeature implements DynamicFeature {
 
-      @Override
-      public void configure(final ResourceInfo resourceInfo,
-                            final FeatureContext context) {
+    @Override
+    public void configure(final ResourceInfo resourceInfo,
+                          final FeatureContext context) {
 
-          final String resourcePackage = resourceInfo.getResourceClass()
-                  .getPackage().getName();
-          final Method resourceMethod = resourceInfo.getResourceMethod();
+        final String resourcePackage = resourceInfo.getResourceClass()
+                .getPackage().getName();
+        final Method resourceMethod = resourceInfo.getResourceMethod();
 
-          if ("my.package.admin".equals(resourcePackage)
-                  && resourceMethod.getAnnotation(GET.class) != null) {
-              context.register(LogRecorderInterceptor.class);
-          }
-      }
-  }
+        if ("my.package.admin".equals(resourcePackage)
+                && resourceMethod.getAnnotation(GET.class) != null) {
+            context.register(LogRecorderInterceptor.class);
+        }
+    }
+}
   {% endhighlight %}
 
 在这种情况下所有在my.package.admin包中类的方法，都会执行LogRecorderInterceptor中的filter方法。
