@@ -1,3 +1,4 @@
 markdown: rdiscount
 author: Cheney Fan
-baseurl: http://xiazhiyu.github.io
+#baseurl: 
+url: http://fyg.xyjp.net
