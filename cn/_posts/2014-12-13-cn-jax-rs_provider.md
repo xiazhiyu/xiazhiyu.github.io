@@ -51,7 +51,7 @@ tag: JAVA JAX-RS
   }
   {% endhighlight %}
 
-对rsource类，或者方法进行注解
+对resource类或者方法进行注解
   
   {% highlight java %}
   @LogRecorder
@@ -63,7 +63,7 @@ tag: JAVA JAX-RS
     /*
     login logic
     */
-  ｝
+  }
   {% endhighlight %}
 
   
