@@ -3,7 +3,7 @@ layout: home
 avatar: yes
 ---
 
-This is Cheney Fan's personal blog. <br>
+This is Cheney Fan's blog. <br>
 
 I am a Chinese living in Tokyo , and working for Accenture Japan. I am SAP Consultant, a soft engineer, and used to be an accountant. I like coding , more than the debit or the credit.
 
