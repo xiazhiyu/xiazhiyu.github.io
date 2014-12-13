@@ -3,6 +3,7 @@ layout: post_cn
 title: "关于badi"
 date: 2014-10-18 15:23:36
 categories: SAP
+tags: abap
 ---
 
 虽然早就听说badi，好像是什么第三代出口，但之前一直做的so订单里面没有涉及。
