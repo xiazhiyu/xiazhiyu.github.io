@@ -2,7 +2,8 @@
 layout: post_cn
 title: "java连接mongodb"
 date: 2014-12-13 20:47:36
-categories: JAVA
+categories: 开发
+tag: JAVA
 ---
 
 好久没有碰java了。最近尝试用java连接mongodb。
