@@ -14,7 +14,7 @@ tag: chrome插件
 
 依然用的瀑布流，不过这次用了一个国产框架。[http://wlog.cn/waterfall/index-zh.html](http://wlog.cn/waterfall/index-zh.html)
 
-因为自己的相册是公开的（地址：[https://fyg-xiazhiyu.c9.io/](https://fyg-xiazhiyu.c9.io/)）
+因为自己的相册是公开的（地址：[https://fyg-xiazhiyu.c9.io/fyg](https://fyg-xiazhiyu.c9.io/)）
 想在页面中自己能够删除图片（不许别人删除），又懒得开发注册验证之类，怎么办呢？
 想了一个办法：
 在chrome插件中，对相册网页body加入一个class。而在网页javascript中检查body是否有包含这个class，当存在时则显示删除按钮。
