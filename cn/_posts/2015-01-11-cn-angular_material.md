@@ -8,10 +8,10 @@ tag: Angular
 
 [Angular material](https://material.angularjs.org)是一个按照Google的Material Design建的组件框架。
 目前稳定版本是0.6.1，网站文档也是0.6.1。而最新版本则是v0.7.0-rc2。
-对于Text Field，0.7与0.6相比比较大。取消了md-text-float。
+对于Text Field，0.7与0.6相比变化比较大。取消了md-text-float。
 以前是这么写的：
   {% highlight javascript %}
-<md-text-float label="LastName" ng-model="user.lastName"> </md-text-float>
+<md-text-float label="LastName" ng-model="user.lastName"></md-text-float>
   {% endhighlight %} 
 angular会将md-text-float转换成一个label和input。
 而现在则变成这样：
@@ -47,3 +47,5 @@ angular.module('material.components.input', [
   {% endhighlight %} 
 
 接着需要自己对select做CSS样式修改。
+完成效果如下：
+![angularjs_materail](http://picforxyjp.qiniudn.com/angularjs_materail.gif)
