@@ -54,3 +54,5 @@ def valid(x):
 
 GetNumber(1500)
   {% endhighlight %} 
+
+python执行花了十几分钟！
