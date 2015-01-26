@@ -1,7 +1,7 @@
 ---
 layout: post_cn
 title: "算法练习01：简介(1)"
-date: 2015-01-27 01:31:36
+date: 2015-01-27 01:31:40
 categories: 开发
 tag: 算法
 ---
