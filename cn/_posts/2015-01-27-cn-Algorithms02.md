@@ -131,4 +131,10 @@ int min_free2(int* xs, int n){
   return l;
 }
   {% endhighlight %} 
-c的指针果然是难以理解啊！
+c的指针果然是难以理解。
+
+做一下记录：
+<code>
+  xs = xs + left;
+</code>
+数组的指针指向的是数组中第一个元素（下标0）的地址，当指针xs加left个单位后，下标将增加left个单位，及下标0+left位置。当while第二次循环时，xs下标位0+left，接着执行完毕后会再增加left个单位，直到结束。
