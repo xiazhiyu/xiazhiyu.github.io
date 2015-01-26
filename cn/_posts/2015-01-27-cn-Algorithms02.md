@@ -131,3 +131,4 @@ int min_free2(int* xs, int n){
   return l;
 }
   {% endhighlight %} 
+c的指针果然是难以理解啊！
