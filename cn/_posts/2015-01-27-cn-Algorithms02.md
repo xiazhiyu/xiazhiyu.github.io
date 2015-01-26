@@ -36,7 +36,6 @@ int xs[15] = {18, 4, 8, 9, 16, 1, 14, 7, 19, 3, 0, 5, 2, 11, 6};
 int min_free(int* xs, int n)
 {
   int i, j, len = N/WORD_LENGTH+1;//确定初始化bit数组长度
-// 100000/16 +1 = 6251
   for(i = 0; i < len ; ++i)
   {
     bits[i]=0;//初始化bits数组,全部填充0
@@ -44,7 +43,6 @@ int min_free(int* xs, int n)
 
   for(i=0; i< n; ++i)
   {
-    printf("%d\n",i);
     if(xs[i]<n)
     {
       setbit(bits, xs[i]);
@@ -98,29 +96,17 @@ int min_free2(int* xs, int n){
   int l = 0;
   int u = n-1;
   while(n){
-   
-    printf("%d\n", n);
     int m = (l+u)/2;
     int right, left = 0;
     for (right = 0; right < n ; ++ right){
-      // printf("%d\n", m);
-      // printf("%d\n", xs[left]);
-      // printf("%d\n", xs[right]);
-      // printf("%d\n", left);
       if(xs[right] <= m){
         swap(&xs[left], &xs[right]);
         ++left;       
       }
     }
-    printf("%d\n", left);
-    printf("xs size:%lu\n", sizeof(xs));
-    printf("end for\n");
-    printf("%d\n", left);
+
     if(left == m -l +1){
-      printf("goto right\n");
-      printf("%lu\n", sizeof(xs));
       xs = xs + left;
-      printf("%lu\n", sizeof(xs));
       n = n - left;
       l = m + 1;
     }else{
