@@ -56,3 +56,31 @@ GetNumber(1500)
   {% endhighlight %} 
 
 python执行花了十几分钟！
+
+2 改进1
+  {% highlight python %}
+#方法2：第一次改进
+@timeCul
+def GetNumberImprove(n):
+  Q = [1]
+  l = 0
+  while n>0:
+    x = Q[l]
+    Q = UniqueEnqueue(Q, 2*x)
+    Q = UniqueEnqueue(Q, 3*x)
+    Q = UniqueEnqueue(Q, 5*x)
+    n = n-1
+    l = l + 1
+  return x
+
+
+def UniqueEnqueue(Q, x):
+  i = 0
+  while i < len(Q) and Q[i] < x:
+    i = i + 1
+  if i < len(Q) and x == Q[i]:
+    return Q
+  Q.insert(i, x)
+  return Q
+  {% endhighlight %} 
+改进后仅花0.6秒！
