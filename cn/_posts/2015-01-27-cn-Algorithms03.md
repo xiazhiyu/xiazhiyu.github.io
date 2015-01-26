@@ -1,6 +1,6 @@
 ---
 layout: post_cn
-title: "算法练习03：简介(3)"
+title: "算法练习03：简介 寻找丑数(1)"
 date: 2015-01-27 05:00:33
 categories: 开发
 tag: 算法
