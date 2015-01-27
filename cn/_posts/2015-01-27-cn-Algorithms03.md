@@ -84,3 +84,52 @@ def UniqueEnqueue(Q, x):
   return Q
   {% endhighlight %} 
 改进后仅花0.6秒！
+
+3 改进3（c++）
+  {% highlight c++ %}
+#include <iostream>
+#include <queue> 
+#include <time.h>
+using namespace std;
+
+typedef unsigned long Integer;
+
+Integer getNumber(int n){
+  if(n == 1)
+    return 1;
+  queue<Integer> list2, list3, list5;
+  list2.push(2);
+  list3.push(3);
+  list5.push(5);
+  Integer x;
+  while(n-- >1){
+    x = min(min(list2.front(), list3.front()), list5.front());
+    if(x == list2.front()){
+      list2.pop();
+      list2.push(x*2);
+      list3.push(x*3);
+      list5.push(x*5);
+    }else if (x == list3.front()){
+      list3.pop();
+      list3.push(x*3);
+      list5.push(x*5);
+
+    }else if (x == list5.front()){
+      list5.pop();
+      list5.push(x*5);
+    }
+  }
+  return x;
+}
+
+int main(){
+  clock_t clockT1, clockT2;
+  clockT1 = clock();
+  printf("%lu\n",getNumber(1500));
+  clockT2 = clock();
+  printf("执行时间：%f秒\n",
+                (double)(clockT2 - clockT1)/CLOCKS_PER_SEC);
+  return 0;
+}
+  {% endhighlight %} 
+
