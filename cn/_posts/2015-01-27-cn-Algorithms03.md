@@ -2,11 +2,11 @@
 layout: post_cn
 title: "算法练习03：简介 寻找丑数"
 date: 2015-01-27 05:00:33
-categories: 开发
+categories: 计算机理论
 tag: 算法
 ---
 
-接着[上篇](/cn/%E5%BC%80%E5%8F%91/2015/01/27/cn-Algorithms02.html)。
+接着[上篇](/cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/2015/01/27/cn-Algorithms02.html)。
 
 第二题：寻找第1500个“丑数”。所谓丑数，就是只含有2、3或5这三个因子的自然数。
 

@@ -96,3 +96,8 @@ embed,object,iframe{display:block;margin:4px auto;}
   h1,h2,h3{font-weight:400;}
   a{color:black;border-bottom:lightgray dotted 1px;}
 }
+
+ul.category li:first-child:nth-last-child(1){
+    display: none;
+}
+

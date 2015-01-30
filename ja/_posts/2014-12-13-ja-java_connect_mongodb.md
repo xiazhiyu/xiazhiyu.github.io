@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post_ja
 title: "javaからmongodbへアクセス"
 date: 2014-12-13 20:47:36
 categories: 開発

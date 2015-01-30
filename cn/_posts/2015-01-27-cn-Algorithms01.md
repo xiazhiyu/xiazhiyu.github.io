@@ -2,7 +2,7 @@
 layout: post_cn
 title: "算法练习01：简介 最小可用ID (1)"
 date: 2015-01-27 01:31:40
-categories: 开发
+categories: 计算机理论
 tag: 算法
 ---
 
@@ -66,4 +66,4 @@ def min_free(lst):
 min_free(lst)
   {% endhighlight %} 
 
-[下篇](/cn/%E5%BC%80%E5%8F%91/2015/01/27/cn-Algorithms02.html)将使用c语言和二进制来进行改进。
+[下篇](/cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/2015/01/27/cn-Algorithms02.html)将使用c语言和二进制来进行改进。

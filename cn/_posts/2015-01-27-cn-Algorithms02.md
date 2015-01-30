@@ -2,11 +2,11 @@
 layout: post_cn
 title: "算法练习02：简介 最小可用ID (2)"
 date: 2015-01-27 01:35:33
-categories: 开发
+categories: 计算机理论
 tag: 算法
 ---
 
-接着[上篇](/cn/%E5%BC%80%E5%8F%91/2015/01/27/cn-Algorithms01.html)的练习。
+接着[上篇](/cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/2015/01/27/cn-Algorithms01.html)的练习。
 
 3 改进2(c)
 
@@ -127,4 +127,4 @@ c的指针果然是难以理解。
 </p>
 数组的指针指向的是数组中第一个元素（下标0）的地址，当指针xs加left个单位后，下标将增加left个单位，到达left位置（实际上是将数组分成左右部分，xs指针指向右半部分数组）。当while第二次循环时，xs下标位初始值left，接着执行完毕后下标会再移动left个单位，一直循环执行直到n=0。
 
-[下篇](/cn/%E5%BC%80%E5%8F%91/2015/01/27/cn-Algorithms03.html)讲寻找丑数的练习。
+[下篇](/cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/2015/01/27/cn-Algorithms03.html)讲寻找丑数的练习。

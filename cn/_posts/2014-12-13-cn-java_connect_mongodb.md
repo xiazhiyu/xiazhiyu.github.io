@@ -2,7 +2,7 @@
 layout: post_cn
 title: "java连接mongodb"
 date: 2014-12-13 20:47:36
-categories: 开发
+categories: web开发
 tag: JAVA
 ---
 

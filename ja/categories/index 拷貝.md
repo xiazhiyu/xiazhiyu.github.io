@@ -1,25 +1,28 @@
 ---
 title: Categories
-layout: default_cn
+layout: default_ja
 ---
 
 <div id='tag_cloud'>
+{% for cat in site.categories %}
+    {% if (cat[0] | split : '.')[1] == 'ja' %}
+        <a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a>
+    {% endif %}
+{% endfor %}
 </div>
 
 <ul class="listing">
 {% for cat in site.categories %}
    {% if cat[0] != 'cn' and cat[0] != 'ja' %}
-    <ul class="category">
     <li class="listing-seperator" id="{{ cat[0] }}">{{ cat[0] }}</li>
     {% for post in cat[1] %}
-      {% if post.categories contains 'cn' %}
+      {% if post.categories contains 'ja' %}
         <li class="listing-item">
         <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
         <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         </li>
       {% endif %}
     {% endfor %}
-    </ul>
   {% endif %}
 {% endfor %}
 </ul>

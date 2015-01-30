@@ -2,7 +2,7 @@
 layout: post_cn
 title: "JAX-RS中的提供器"
 date: 2014-12-13 23:32:36
-categories: 开发
+categories: web开发
 tag: JAVA JAX-RS
 ---
 

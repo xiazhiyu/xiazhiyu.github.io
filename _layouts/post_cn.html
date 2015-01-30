@@ -19,19 +19,19 @@ layout: default_cn
 </span>
 {% if page.categories %}
 <span class="categories">
-  in categories
+  类别：
   {% for cat in page.categories %}
     {% if cat != 'cn' %}
-      <a href="{{ site.url }}/cn/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+      <a href="{{ site.baseurl }}/cn/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
     {% endif %}
   {% endfor %}
 </span>
 {% endif %}
 {% if page.tags %}
 <span class="tags">
-  tagged with 
+  标签：
   {% for tag in page.tags %}
-  <a href="{{ site.url }}/cn/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+  <a href="{{ site.baseurl }}/cn/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
   {% endfor %}
 </span>
 {% endif %}
@@ -44,12 +44,12 @@ $(function(){
     var url = false;
         if (e.which == 37 || e.which == 74) {  // Left arrow and J
             {% if page.previous %}
-        url = '{{ site.url }}{{ page.previous.url }}';
+        url = '{{ site.baseurl }}{{ page.previous.url }}';
         {% endif %}
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             {% if page.next %}
-        url = '{{ site.url }}{{ page.next.url }}';
+        url = '{{ site.baseurl }}{{ page.next.url }}';
         {% endif %}
         }
         if (url) {

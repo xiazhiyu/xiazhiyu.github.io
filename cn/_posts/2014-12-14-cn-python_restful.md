@@ -2,7 +2,7 @@
 layout: post_cn
 title: "用python构建restful服务"
 date: 2014-12-14 21:31:36
-categories: 开发
+categories: web开发
 tag: python
 ---
 

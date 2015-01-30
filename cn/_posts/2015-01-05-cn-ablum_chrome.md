@@ -2,7 +2,7 @@
 layout: post_cn
 title: "做了相册(chrome插件)"
 date: 2015-01-05 21:31:36
-categories: 开发
+categories: web开发
 tag: chrome插件
 ---
 

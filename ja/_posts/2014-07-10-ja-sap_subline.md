@@ -1,7 +1,7 @@
 ---
-layout: post_cn
+layout: post_ja
 title: "価格計算の小計ロジックの変更"
-categories: SAP
+categories: SAP関連
 tag: abap
 date: 2014-07-10 23:34:41
 ---
