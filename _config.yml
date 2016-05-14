@@ -1,4 +1,4 @@
-markdown: rdiscount
+markdown: kramdown
 author: Cheney Fan
 baseurl: 
 url: http://fyg.xyjp.net

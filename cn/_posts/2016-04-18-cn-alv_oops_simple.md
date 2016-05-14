@@ -1,6 +1,6 @@
 ---
 layout: post_cn
-title: "ALV OOPS"
+title: "A simple program on ALV OOPS"
 date: 2016-04-18 21:41:33
 categories: SAP
 tag: abap
