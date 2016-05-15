@@ -6,6 +6,8 @@ categories: SAP
 tag: abap
 ---
 
+Just a test.
+
 A simple program on ALV OOPS.
 
 	{% highlight abap %}
